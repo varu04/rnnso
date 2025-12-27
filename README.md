@@ -29,3 +29,7 @@ df <- rnsso_read_data("path/to/LEVEL - 01.txt", level = "L01")
 # Or load an entire folder of datasets
 hces_list <- rnsso_read_data("path/to/dataset_folder/")
 ```
+=======
+# rnnso
+An R package for processing and analyzing National Sample Survey Office (NSSO) unit-level data. Currently supporting the Household Consumption Expenditure Survey (HCES) 2023-24.
+
