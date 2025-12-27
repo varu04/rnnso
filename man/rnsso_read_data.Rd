@@ -2,28 +2,19 @@
 % Please edit documentation in R/read_data.R
 \name{rnsso_read_data}
 \alias{rnsso_read_data}
-\title{Read and Parse NSSO Fixed-Width Data Files}
+\title{Read NSSO/HCES Data (Single File or Full Folder)}
 \usage{
-rnsso_read_data(file_path, round, schedule)
+rnsso_read_data(path, round = 2024, level = NULL, delim = "\\t")
 }
 \arguments{
-\item{file_path}{Character string: The path to the downloaded NSSO unit-level data file.}
+\item{path}{Path to either a single .txt file OR a folder containing multiple LEVEL files.}
 
-\item{round}{Integer: The NSSO survey round (e.g., 75, 77).}
+\item{round}{The year/round of the survey (default 2024).}
 
-\item{schedule}{Character string: The survey schedule (e.g., "HCE" for Household Consumption).}
-}
-\value{
-A dplyr::tibble containing the parsed and labelled NSSO data.
+\item{level}{Only required if reading a single file (e.g., "L01").}
+
+\item{delim}{The delimiter used (default is tab "\t").}
 }
 \description{
-Reads a raw NSSO fixed-width data file (.dat or .txt) using an
-internal codebook and returns a clean, labelled data frame (tibble).
-}
-\examples{
-\dontrun{
-# Assuming the user has downloaded the raw file:
-# hce_data <- rnsso_read_data("C:/Users/Data/NSSO75_HCE.DAT", round = 75, schedule = "HCE")
-# head(hce_data)
-}
+Read NSSO/HCES Data (Single File or Full Folder)
 }
